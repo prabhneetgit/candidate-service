@@ -10,5 +10,5 @@ RUN mkdir /candidate \
   && git clone --depth 1 --branch build-artifacts-gke \
       "https://github.com/prabhneetgit/candidate-service.git" /candidate \
   && cd /candidate \
-  && mv candidate-service-*.jar candidate-service.jar
+  && mv candidate-*.jar candidate-service.jar
 CMD [ "java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "candidate/candidate-service.jar" ]
